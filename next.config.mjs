@@ -9,6 +9,16 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-}
+  webpack(config) {
+    // Add SVG support with SVGR
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: ['@svgr/webpack'],
+    });
 
-export default nextConfig
+    return config;
+  },
+};
+
+export default nextConfig;
