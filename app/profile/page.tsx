@@ -1,5 +1,4 @@
 import { ProtectedRoute } from "../../components/auth/protected-route"
-import { DashboardLayout } from "../../components/dashboard/dashboard-layout"
 import { ProfileForm } from "../../components/profile/profile-form"
 // Add to your profile page for testing
 
@@ -9,7 +8,7 @@ import { ProfileForm } from "../../components/profile/profile-form"
 export default function ProfilePage() {
   return (
     <ProtectedRoute>
-      <DashboardLayout>
+      
         <div className="max-w-2xl mx-auto">
           <div className="mb-8">
             <h1 className="text-3xl font-bold">Profile Settings</h1>
@@ -17,7 +16,7 @@ export default function ProfilePage() {
           </div>
           <ProfileForm />
         </div>
-      </DashboardLayout>
+      
     </ProtectedRoute>
   )
 }
